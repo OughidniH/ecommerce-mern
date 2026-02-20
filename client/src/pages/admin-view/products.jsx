@@ -18,7 +18,11 @@ import {
 } from "@/store/admin/products-slice";
 import { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+<<<<<<< HEAD
 import { fetchAllCategories } from "@/store/admin/category-slice";
+=======
+
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
 const initialFormData = {
   image: null,
   title: "",
@@ -41,6 +45,7 @@ function AdminProducts() {
   const [currentEditedId, setCurrentEditedId] = useState(null);
 
   const { productList } = useSelector((state) => state.adminProducts);
+<<<<<<< HEAD
   /*GCosmosWeb*/
   const { categoryList = [] } = useSelector((state) => state.adminCategory) || {};
   /*GCosmosWeb*/
@@ -55,6 +60,11 @@ function AdminProducts() {
     dispatch(fetchAllCategories());
   }, [dispatch]);
   /*GCosmosWeb*/
+=======
+  const dispatch = useDispatch();
+  const { toast } = useToast();
+
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
   function onSubmit(event) {
     event.preventDefault();
 
@@ -112,6 +122,7 @@ function AdminProducts() {
   }, [dispatch]);
 
   console.log(formData, "productList");
+<<<<<<< HEAD
   /*GCosmosWeb*/
   const updatedFormElements = addProductFormElements.map((item) =>
        item.name === "category"
@@ -125,6 +136,9 @@ function AdminProducts() {
         : item
     );
 /*GCosmosWeb*/
+=======
+
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
   return (
     <Fragment>
       <div className="mb-5 w-full flex justify-end">
@@ -174,7 +188,11 @@ function AdminProducts() {
               formData={formData}
               setFormData={setFormData}
               buttonText={currentEditedId !== null ? "Edit" : "Add"}
+<<<<<<< HEAD
               formControls={updatedFormElements}
+=======
+              formControls={addProductFormElements}
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
               isBtnDisabled={!isFormValid()}
             />
           </div>

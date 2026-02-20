@@ -58,11 +58,19 @@ export const addProductFormElements = [
     name: "category",
     componentType: "select",
     options: [
+<<<<<<< HEAD
       // { id: "men", label: "Men" },
       // { id: "women", label: "Women" },
       // { id: "kids", label: "Kids" },
       // { id: "accessories", label: "Accessories" },
       // { id: "footwear", label: "Footwear" },
+=======
+      { id: "men", label: "Men" },
+      { id: "women", label: "Women" },
+      { id: "kids", label: "Kids" },
+      { id: "accessories", label: "Accessories" },
+      { id: "footwear", label: "Footwear" },
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
     ],
   },
   {

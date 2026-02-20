@@ -1,5 +1,6 @@
 const Order = require("../../models/Order");
 
+<<<<<<< HEAD
 /*GCosmosWeb*/
 const createOrder = async (req, res) => {
     try {
@@ -13,6 +14,8 @@ const createOrder = async (req, res) => {
 };
 
 /*GCosmosWeb*/
+=======
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
 const getAllOrdersOfAllUsers = async (req, res) => {
   try {
     const orders = await Order.find({});
@@ -93,9 +96,12 @@ const updateOrderStatus = async (req, res) => {
 };
 
 module.exports = {
+<<<<<<< HEAD
 /*GCosmosWeb*/
   createOrder,
 /*GCosmosWeb*/
+=======
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
   getAllOrdersOfAllUsers,
   getOrderDetailsForAdmin,
   updateOrderStatus,

@@ -5,6 +5,7 @@ import UserCartItemsContent from "@/components/shopping-view/cart-items-content"
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { createNewOrder } from "@/store/shop/order-slice";
+<<<<<<< HEAD
 import { useNavigate  } from "react-router-dom";
 import { clearCartFromDB } from "@/store/shop/cart-slice";
 import { useToast } from "@/components/ui/use-toast";
@@ -12,17 +13,31 @@ import { use } from "react";
 //import { fetchCartItems } from "@/store/shop/cart-slice";
 function ShoppingCheckout() {
 
+=======
+import { Navigate } from "react-router-dom";
+import { useToast } from "@/components/ui/use-toast";
+
+function ShoppingCheckout() {
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
   const { cartItems } = useSelector((state) => state.shopCart);
   const { user } = useSelector((state) => state.auth);
   const { approvalURL } = useSelector((state) => state.shopOrder);
   const [currentSelectedAddress, setCurrentSelectedAddress] = useState(null);
   const [isPaymentStart, setIsPaymemntStart] = useState(false);
+<<<<<<< HEAD
   const [isPaymentCODStart, setIsPaymentCODStart] = useState(false);
   const dispatch = useDispatch();
   const { toast } = useToast();
   const navigate = useNavigate();
   //console.log(currentSelectedAddress, "cartItems");
   //console.log("CART STATE =>", cartItems);
+=======
+  const dispatch = useDispatch();
+  const { toast } = useToast();
+
+  console.log(currentSelectedAddress, "cartItems");
+
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
   const totalCartAmount =
     cartItems && cartItems.items && cartItems.items.length > 0
       ? cartItems.items.reduce(
@@ -95,6 +110,7 @@ function ShoppingCheckout() {
     });
   }
 
+<<<<<<< HEAD
  /*GCosmosWeb*/
   function handleInitiateCODPayment() {
     if (cartItems?.items?.length === 0) {
@@ -168,6 +184,8 @@ function ShoppingCheckout() {
   }
   /*GCosmosWeb*/
 
+=======
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
   if (approvalURL) {
     window.location.href = approvalURL;
   }
@@ -194,6 +212,7 @@ function ShoppingCheckout() {
               <span className="font-bold">${totalCartAmount}</span>
             </div>
           </div>
+<<<<<<< HEAD
          {/*GCosmosWeb*/}
           <div className="mt-4 w-full gap-2 flex flex-col">
             <Button onClick={handleInitiateCODPayment} className="w-full">
@@ -203,6 +222,10 @@ function ShoppingCheckout() {
             </Button>
          {/*GCosmosWeb*/}
               <Button onClick={handleInitiatePaypalPayment} className="w-full">
+=======
+          <div className="mt-4 w-full">
+            <Button onClick={handleInitiatePaypalPayment} className="w-full">
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
               {isPaymentStart
                 ? "Processing Paypal Payment..."
                 : "Checkout with Paypal"}

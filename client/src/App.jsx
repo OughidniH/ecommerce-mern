@@ -5,7 +5,10 @@ import AuthRegister from "./pages/auth/register";
 import AdminLayout from "./components/admin-view/layout";
 import AdminDashboard from "./pages/admin-view/dashboard";
 import AdminProducts from "./pages/admin-view/products";
+<<<<<<< HEAD
 import AdminCategory from "./pages/admin-view/category";
+=======
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
 import AdminOrders from "./pages/admin-view/orders";
 import AdminFeatures from "./pages/admin-view/features";
 import ShoppingLayout from "./components/shopping-view/layout";
@@ -71,7 +74,10 @@ function App() {
         >
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="products" element={<AdminProducts />} />
+<<<<<<< HEAD
           <Route path="category" element={<AdminCategory />} />
+=======
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
           <Route path="orders" element={<AdminOrders />} />
           <Route path="features" element={<AdminFeatures />} />
         </Route>

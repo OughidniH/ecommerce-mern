@@ -99,6 +99,7 @@ const shoppingCartSlice = createSlice({
       .addCase(deleteCartItem.rejected, (state) => {
         state.isLoading = false;
         state.cartItems = [];
+<<<<<<< HEAD
       })
       /*GCosmosWeb*/
       .addCase(clearCartFromDB.fulfilled, (state, action) => {
@@ -116,4 +117,10 @@ export const clearCartFromDB = createAsyncThunk(
   }
 );
 /*GCosmosWeb*/
+=======
+      });
+  },
+});
+
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
 export default shoppingCartSlice.reducer;

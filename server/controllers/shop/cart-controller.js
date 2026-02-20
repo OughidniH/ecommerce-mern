@@ -229,6 +229,7 @@ const deleteCartItem = async (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 /*GCosmosWeb*/
 const clearCart = async (req, res) => {
   try {
@@ -270,10 +271,15 @@ const clearCart = async (req, res) => {
 };
 /*GCosmosWeb*/
 
+=======
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
 module.exports = {
   addToCart,
   updateCartItemQty,
   deleteCartItem,
   fetchCartItems,
+<<<<<<< HEAD
   clearCart,
+=======
+>>>>>>> 0af58a59d3f77ea0ed43e63857ac20f0a1e0d172
 };
