@@ -65,8 +65,7 @@ function AdminProducts() {
             formData,
           })
         ).then((data) => {
-          console.log(data, "edit");
-
+        
           if (data?.payload?.success) {
             dispatch(fetchAllProducts());
             setFormData(initialFormData);
@@ -111,7 +110,7 @@ function AdminProducts() {
     dispatch(fetchAllProducts());
   }, [dispatch]);
 
-  console.log(formData, "productList");
+ 
   /*GCosmosWeb*/
   const updatedFormElements = addProductFormElements.map((item) =>
        item.name === "category"
@@ -119,7 +118,7 @@ function AdminProducts() {
             ...item,
             options: categoryList?.map((cat) => ({
               id: cat._id,
-              label: cat.nameCat, // ⚠️ assure-toi que ton model a bien "name"
+              label: cat.nameCat, 
             })),
           }
         : item

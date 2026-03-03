@@ -8,6 +8,8 @@ import AdminBanners from "./pages/admin-view/banners";
 import AdminProducts from "./pages/admin-view/products";
 import AdminCategory from "./pages/admin-view/category";
 import AdminOrders from "./pages/admin-view/orders";
+import QuickOrdersDashboard from "./pages/admin-view/quickOrders";
+import QuickOrderPage from "./pages/shopping-view/quick-order"
 import AdminFeatures from "./pages/admin-view/features";
 import ShoppingLayout from "./components/shopping-view/layout";
 import NotFound from "./pages/not-found";
@@ -37,7 +39,7 @@ function App() {
 
   if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />;
 
-  console.log(isLoading, user);
+  //console.log(isLoading, user);
 
   return (
     <div className="flex flex-col overflow-hidden bg-white">
@@ -70,8 +72,12 @@ function App() {
           <Route path="products" element={<AdminProducts />} />
           <Route path="category" element={<AdminCategory />} />
           <Route path="orders" element={<AdminOrders />} />
+          <Route path="quickOrders" element={<QuickOrdersDashboard />} />
           <Route path="features" element={<AdminFeatures />} />
         </Route>
+
+        <Route path="/order/:productId" element={<QuickOrderPage />} />
+        
         <Route
           path="/shop"
           element={<ShoppingLayout />}

@@ -12,7 +12,7 @@ const initialState = {
 export const createNewOrder = createAsyncThunk(
   "/order/createNewOrder",
   async (orderData) => {
-    console.log(orderData, "orderData");
+  
     const response = await api.post("/shop/order/create", orderData);
     return response.data;
   },

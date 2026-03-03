@@ -94,7 +94,7 @@ const totalRevenue = orderList.reduce(
             <CardTitle>Total Revenue</CardTitle>
           </CardHeader>
           <CardContent>
-               <p className="text-3xl font-bold">${totalRevenue.toFixed(2)}</p>
+               <p className="text-3xl font-bold">{totalRevenue.toFixed(2)} DZD</p>
           </CardContent>
         </Card>
       </div>

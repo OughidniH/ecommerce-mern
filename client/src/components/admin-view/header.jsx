@@ -21,16 +21,15 @@ function AdminHeader({ setOpen }) {
       {/* Right buttons */}
       <div className="flex flex-1 justify-end gap-2">
         {/* Accéder au site */}
-        {/* <Button
-          as="a"
-          href="/"
+       <a
+          href="/shop/home"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex gap-2 items-center rounded-md px-4 py-2 text-sm font-medium shadow"
+          className="inline-flex gap-2 items-center rounded-md px-4 py-2 text-sm font-medium shadow bg-primary text-white hover:bg-primary/90"
         >
           <ExternalLink />
           Accéder au site
-        </Button> */}
+        </a>
 
         {/* Logout */}
         <Button

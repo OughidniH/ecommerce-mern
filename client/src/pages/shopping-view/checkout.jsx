@@ -21,8 +21,7 @@ function ShoppingCheckout() {
   const dispatch = useDispatch();
   const { toast } = useToast();
   const navigate = useNavigate();
-  //console.log(currentSelectedAddress, "cartItems");
-  //console.log("CART STATE =>", cartItems);
+ 
   const totalCartAmount =
     cartItems && cartItems.items && cartItems.items.length > 0
       ? cartItems.items.reduce(
@@ -86,7 +85,7 @@ function ShoppingCheckout() {
     };
 
     dispatch(createNewOrder(orderData)).then((data) => {
-      console.log(data, "sangam");
+     
       if (data?.payload?.success) {
         setIsPaymemntStart(true);
       } else {
@@ -152,7 +151,7 @@ function ShoppingCheckout() {
         });
   
     setIsPaymentCODStart(false);
-     console.log(user?.id, "user id for clear cart");
+    
     dispatch(clearCartFromDB(user?.id)).then(() => {
       navigate("/");
     });
@@ -191,7 +190,7 @@ function ShoppingCheckout() {
           <div className="mt-8 space-y-4">
             <div className="flex justify-between">
               <span className="font-bold">Total</span>
-              <span className="font-bold">${totalCartAmount}</span>
+              <span className="font-bold">{totalCartAmount} DZD</span>
             </div>
           </div>
          {/*GCosmosWeb*/}

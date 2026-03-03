@@ -5,6 +5,7 @@ import {
   ShoppingBasket,
   List,
   Image, 
+  ClipboardList,
 } from "lucide-react";
 import { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
@@ -40,6 +41,12 @@ const adminSidebarMenuItems = [
     label: "Orders",
     path: "/admin/orders",
     icon: <BadgeCheck />,
+  },
+  {
+    id: "quickOrders",
+    label: "Quick Orders",
+    path: "/admin/quickOrders",
+    icon: <ClipboardList />,
   },
 ];
 
